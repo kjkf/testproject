@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="assets/libs/awesome/css/all.min.css">
+    <title>Регисттрация</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="signup section">
+            <div class="container">
+                <div class="section__wrapper">
+                    <div class="section__wrapper-form">
+                        <h2 class="signup__form-header">Регистрация</h2>
+                        <form action="#0" class="signup__form form">
+                            <div class="form-wrapper">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="text" required placeholder=" " id="userName" class="form-elem form-input form-input--email">
+                                        <label for="userName" class="form-label">Имя</label>
+                                        <span class="input-icon">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="email" required placeholder=" " id="newemail" class="form-elem form-input form-input--email">
+                                        <label for="newemail" class="form-label">Электронная почта</label>
+                                        <span class="input-icon">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="requirements">
+                                            Введите адрес электронной почты в правильном формате.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="password" required placeholder=" " id="newpassword"
+                                               class="form-elem form-input form-input--password"
+                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+                                        <label for="newpassword" class="form-label">Пароль</label>
+                                        <span class="input-icon">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="requirements">
+                                            Пароль должен содержать хотя бы одну цифру, хотя бы одну латинскую букву в верхнем и нижнем регистре. Длина пароля не меньше 6 символов.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="password" required placeholder=" " id="newpassword2"
+                                               class="form-elem form-input form-input--password"
+                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+                                        <label for="newpassword2" class="form-label">Пароль еще раз</label>
+                                        <span class="input-icon">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="requirements repeat-password">
+                                            Пароль должен содержать хотя бы одну цифру, хотя бы одну латинскую букву в верхнем и нижнем регистре. Длина пароля не меньше 6 символов.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col form-col--btn">
+                                        <button type="submit" id="signup" class="form-elem form-button">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col form-col--links">
+                                        <span class="links--wrapper"><a href="login.html" class="links">Войти</a></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="section__wrapper-image">
+                        <img src="./images/content/noutbuk.jpg" alt="notebook">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-date">&#9400; 2020</div>
+            <div class="footer-menu">
+                <span class="gum-menu-wrapper"><i class="gum-menu"></i></span>
+                <i class="home-menu fa fa-home" aria-hidden="true"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.min.js"></script>
+</body>
+</html>

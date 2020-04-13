@@ -1,0 +1,160 @@
+.form-row {
+  display: flex;
+  margin-bottom: 20px;
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.form-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
+  width: 100%;
+  text-align: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color;
+  padding-left: 45px;
+  opacity: .3;
+  position: absolute;
+  top: 6px;
+  left: -13x;
+}
+
+.input-icon {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+.form-input {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: $text-color;
+  padding-left: 30px;
+  background: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid $border-color;
+  position: relative;
+
+  &:valid {
+    background: url("images/content/valid.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 0px;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-bottom-color: $error-color;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) + .form-label {
+    opacity: 0;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border-color: $error-color;
+    z-index: 10;
+  }
+
+  &:valid  + .form-label {
+    opacity: 0;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $focus-color;
+    outline: none;
+  }
+
+  &:focus + .form-label {
+    opacity: 0;
+  }
+
+  &:focus ~ .input-icon {
+    color: $focus-color;
+  }
+}
+
+.requirements.repeat-password.show {
+  max-height: 200px;
+  padding: 10px 15px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border-color: $error-color;
+  z-index: 10;
+}
+
+.requirements {
+  padding: 0 10px;
+  color: $error-color;
+  max-height: 0;
+  transition: .28s;
+  overflow: hidden;
+  font-style: italic;
+  border-radius: 12px;
+  background: #ffffff;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.form-button {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.form-col--links {
+  font-size: 14px;
+  color: $text-color;
+  display: block;
+  text-align: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-color;
+}
